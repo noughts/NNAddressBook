@@ -24,6 +24,10 @@
     return self;
 }
 
+/// RecordID取得
+-(int)recordID{
+	return ABRecordGetRecordID( self.recordRef );
+}
 
 /// アイコン画像取得
 -(UIImage*)image{
@@ -34,7 +38,7 @@
 -(NSArray*)emails{
 	ABMultiValueRef ref = ABRecordCopyValue( self.recordRef, kABPersonEmailProperty );
 	NSArray* emails = (__bridge_transfer NSArray *)ABMultiValueCopyArrayOfAllValues( ref );
-	NSLog( @"%@", emails );
+//	NSLog( @"%@", emails );
 	return emails;
 }
 
@@ -42,7 +46,7 @@
 -(NSArray*)phoneNumbers{
 	ABMultiValueRef ref = ABRecordCopyValue( self.recordRef, kABPersonPhoneProperty );
 	NSArray* phoneNumbers = (__bridge_transfer NSArray *)ABMultiValueCopyArrayOfAllValues( ref );
-	NSLog( @"%@", phoneNumbers );
+//	NSLog( @"%@", phoneNumbers );
 	return phoneNumbers;
 }
 

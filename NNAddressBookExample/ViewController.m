@@ -37,8 +37,8 @@
 	NNAddressBookPerson* person = self.addressBook.people[indexPath.row];
 	cell.imageView.image = person.image;
 	cell.textLabel.text = person.fullName;
-	[person emails];
-	[person phoneNumbers];
+	
+	NSLog( @"%@ %@ %d", person.emails, person.phoneNumbers, person.recordID );
 	
 	return cell;
 }

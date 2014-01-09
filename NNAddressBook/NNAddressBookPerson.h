@@ -14,6 +14,8 @@
 /// イニシャライザ
 - (id)initWithRecord:(ABRecordRef)record;
 
+/// RecordID取得
+-(int)recordID;
 -(UIImage*)image;
 -(NSArray*)emails;
 -(NSArray*)phoneNumbers;
