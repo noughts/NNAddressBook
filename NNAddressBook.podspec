@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NNAddressBook"
-  s.version      = "0.1"
+  s.version      = "0.2.0"
   s.summary      = "AddressBook Library"
   s.homepage     = "https://github.com/noughts/NNAddressBook"
   s.author       = { "noughts" => "noughts@gmail.com" }
