@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				4D1F6F4B187E7EEB0003B40A /* NNAddressBook.h */,
-				4D1F6F4C187E7EEB0003B40A /* NNAddressBookPerson.h */,
 				4D1F6F4D187E7EEB0003B40A /* NNAddressBook.m */,
+				4D1F6F4C187E7EEB0003B40A /* NNAddressBookPerson.h */,
 				4D1F6F4E187E7EEB0003B40A /* NNAddressBookPerson.m */,
 			);
 			name = NNAddressBook;
@@ -488,6 +488,7 @@
 				4D1F6F46187E7EB40003B40A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D1F6F47187E7EB40003B40A /* Build configuration list for PBXNativeTarget "NNAddressBookExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +497,7 @@
 				4D1F6F49187E7EB40003B40A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

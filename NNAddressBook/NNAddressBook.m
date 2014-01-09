@@ -23,8 +23,12 @@
 		ABAddressBookRef book = NULL;
 		ABAddressBookRequestAccessWithCompletion(book, ^(bool granted, CFErrorRef error) {
 			NSLog( @"許可されました" );
-			[self _loadAddressBook];
-			block( YES, nil );
+			// ここでメインスレッドで実行しないと、block内のUI処理が反映されないのでGDCを使っています。
+			// 参考: http://www.dosomethinghere.com/2012/10/08/ios-6-calendar-and-address-book-issues/
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self _loadAddressBook];
+				block( YES, nil );
+			});
 		});
 	} else if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusRestricted || ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusDenied) {
 		NSLog( @"許可されていません" );
